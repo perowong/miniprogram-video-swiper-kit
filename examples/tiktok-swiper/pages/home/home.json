@@ -1,0 +1,12 @@
+{
+  "navigationStyle": "custom",
+  "navigationBarBackgroundColor": "#191919",
+  "navigationBarTitleText": "",
+  "navigationBarTextStyle": "white",
+
+  "disableScroll": true,
+  "initialRenderingCache": "static",
+  "usingComponents": {
+    "videoSwiper": "../videoSwiper/videoSwiper"
+  }
+}

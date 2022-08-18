@@ -1,0 +1,63 @@
+/**app.wxss**/
+@import './weui.less';
+
+page {
+  --fontWeight-normal: 400;
+  --fontWeight-medium: 500;
+  --fontWeight-semibold: 600;
+  --fontWeight-bold: 700;
+  --fontWeight-extrabold: 800;
+  --fontWeight-black: 900;
+  --lineHeight-none: 1;
+  --lineHeight-tight: 1.1;
+  --lineHeight-normal: 1.5;
+  --lineHeight-relaxed: 1.625;
+  /* 1.200 Minor Third Type Scale */
+  --fontSize-0: 28rpx;
+  --fontSize-1: 30rpx;
+  --fontSize-2: 32rpx;
+  --fontSize-root: var(--fontSize-0);
+  --black-0: #000000;
+  --black-1: #191919;
+  --black-2: #555555;
+  --white-0: #FFFFFF;
+  --white-1: #E6E6E6;
+  --gray-0: #838383;
+  --color-primary: var(--white-0);
+  --color-text: var(--white-0);
+  --color-text-light: var(--white-1);
+  --color-text-gray: var(--gray-0);
+  --color-text-link: var(--color-primary);
+  --color-heading: #1a202c;
+  --color-heading-black: var(--black-0);
+  --color-text-black: var(--black-2);
+  --color-link-stroke: var(--orange-1);
+  --bg-media: var(--black-0);
+  --bg: var(--black-1);
+  --bg-white: var(--white-0);
+  --z-index-tab-bar: 1000;
+  --z-index-navigation-bar: 1000;
+  --z-index-modal: 10000;
+  --z-index-modal-inner-view: 10100;
+  --z-index-toast: 11000;
+  background-color: var(--bg);
+  line-height: var(--lineHeight-normal);
+  color: var(--color-text);
+}
+
+text {
+  font-size: var(--fontSize-root);
+  color: inherit;
+}
+
+view {
+  font-size: var(--fontSize-root);
+  color: inherit;
+}
+
+.clear-share-btn-style {
+  width: auto !important;
+  margin: 0;
+  background-color: transparent;
+  padding: 0;
+}

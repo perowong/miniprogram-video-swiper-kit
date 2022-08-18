@@ -1,0 +1,15 @@
+{
+  "name": "miniprogram-video-components",
+  "version": "1.0.0",
+  "description": "An out-of-box video components of miniprogram, such as videoSwiper, slider, commentsHalfDialog, tiktokSocialBar, wechatChannelSocialBar, etc.",
+  "miniprogram": "dist",
+  "repository": "",
+  "bugs": "",
+  "keywords": [],
+  "author": "Pero Wong <ynwangpeng@gmail.com>",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

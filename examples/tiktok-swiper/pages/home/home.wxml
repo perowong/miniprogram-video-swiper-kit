@@ -1,0 +1,4 @@
+<!--pages/home/home.wxml-->
+<videoSwiper
+  list="{{list}}"
+></videoSwiper>

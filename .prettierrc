@@ -1,0 +1,18 @@
+{
+  "useTabs": false,
+  "tabWidth": 2,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "printWidth": 100,
+  "htmlWhitespaceSensitivity": "ignore",
+  "overrides": [
+    {
+      "files": "*.wxss",
+      "options": { "parser": "css" }
+    },
+    {
+      "files": "*.wxml",
+      "options": { "parser": "html" }
+    }
+  ]
+}

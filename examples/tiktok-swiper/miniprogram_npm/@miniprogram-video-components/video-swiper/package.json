@@ -1,0 +1,15 @@
+{
+  "name": "@miniprogram-video-components/video-swiper",
+  "version": "0.0.1",
+  "description": "",
+  "main": "miniprogram_dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "video",
+    "swiper",
+    "miniprogram"
+  ],
+  "author": "Pero Wong <ynwangpeng@gmail.com>"
+}

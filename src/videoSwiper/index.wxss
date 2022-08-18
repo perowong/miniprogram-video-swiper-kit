@@ -1,0 +1,49 @@
+.swiper-container {
+  height: 100vh;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.swiper-item {
+  position: relative;
+  height: 100%;
+}
+
+.swiper-item .video {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-item .icon-in-middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.swiper-item .play-icon {
+  width: 114rpx;
+  height: 142rpx;
+}
+
+.swiper-item .loading-icon {
+  
+}
+
+.swiper-item .loading-icon .loading-size {
+  font-size: 60rpx;
+}
+
+.swiper-item .bottom-mask {
+  position: absolute;
+  top: 40vh;
+  bottom: 0;
+  width: 100%;
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6))
+}
+
+.swiper-item .placeholder-icon {
+  width: 200rpx;
+  height: 200rpx;
+}

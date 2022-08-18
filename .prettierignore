@@ -1,0 +1,9 @@
+.cache
+package.json
+yarn.lock
+package-lock.json
+node_modules
+typings
+miniprogram/libs
+project.config.json
+project.private.config.json
