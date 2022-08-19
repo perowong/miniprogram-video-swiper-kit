@@ -92,7 +92,7 @@ Component({
 
     /**
      * swiper's methods
-    */
+     */
     onSwiperChange(e) {
       const {
         detail: { current }
@@ -118,12 +118,12 @@ Component({
       });
 
       /**
-        * 1. pause the last video
-        * 2. check whether video's metadata has loaded
-        *   - yes: play the next video
-        *   - no: set a 600ms setTimeout waiting timer to show loading icon after 1s when video would not play yet. 
-        *         If video plays, clear the waiting timer
-      */
+       * 1. pause the last video
+       * 2. check whether video's metadata has loaded
+       *   - yes: play the next video
+       *   - no: set a 600ms setTimeout waiting timer to show loading icon after 1s when video would not play yet.
+       *         If video plays, clear the waiting timer
+       */
       const lastItemId = this.data.list[lastIdx].id;
       this._pauseVideo(this._idPrefix(lastItemId), lastItemId, 'swiperAnimationFinish');
 
@@ -143,7 +143,7 @@ Component({
 
     /**
      * On video tap response
-    */
+     */
     onVideoTap(e) {
       const {
         currentTarget: {
@@ -161,10 +161,9 @@ Component({
       }
     },
 
-
     /**
      * On video's native events response
-    */
+     */
     onVideoPlay(e) {
       const {
         currentTarget: {
@@ -253,7 +252,7 @@ Component({
 
     /**
      * On video data waiting and loaded
-    */
+     */
     _setVideoMetadata(id) {
       this.data._videoMetadataMap[id] = true;
     },
@@ -285,7 +284,7 @@ Component({
 
     /**
      * Control video play, pause, seek, etc.
-    */
+     */
     _getVideoCtxExec(videoId, { eventName, args, source }) {
       console.log(`${eventName} ${videoId}, args: ${args}, source: ${source}`);
 
@@ -333,7 +332,7 @@ Component({
     /**
      * Touch stuff
      * control component's opacity
-    */
+     */
     onTouchStart(e) {
       const { touches } = e;
       startY = touches[0].pageY;
@@ -364,7 +363,7 @@ Component({
 
     /**
      * Slider events
-    */
+     */
     onSliderDragStart() {
       this.setData({ infoOpacity: ALL_CLEAR });
     },

@@ -2,7 +2,6 @@
 import mockData from './mockData.js';
 
 Page({
-
   /**
    * Page initial data
    */
@@ -13,42 +12,30 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad(options) {
-
-  },
+  onLoad(options) {},
 
   /**
    * Lifecycle function--Called when page is initially rendered
    */
-  onReady() {
-
-  },
+  onReady() {},
 
   /**
    * Lifecycle function--Called when page show
    */
-  onShow() {
-
-  },
+  onShow() {},
 
   /**
    * Lifecycle function--Called when page hide
    */
-  onHide() {
-
-  },
+  onHide() {},
 
   /**
    * Lifecycle function--Called when page unload
    */
-  onUnload() {
-
-  },
+  onUnload() {},
 
   /**
    * Page event handler function--Called when user click on the top right corner to share
    */
-  onShareAppMessage() {
-
-  }
-})
+  onShareAppMessage() {}
+});

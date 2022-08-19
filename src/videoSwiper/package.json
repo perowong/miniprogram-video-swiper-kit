@@ -1,6 +1,6 @@
 {
   "name": "@miniprogram-video-components/video-swiper",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "miniprogram_dist/index.js",
   "scripts": {
