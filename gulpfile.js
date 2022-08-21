@@ -1,9 +1,8 @@
 const gulp = require('gulp');
-const gulpClean = require('gulp-clean');
+const config = require('./scripts/config');
 const build = require('./scripts/build');
+const devWatch = require('./scripts/devWatch');
+const cleanWrap = require('./scripts/clean');
 
-function clean() {
-  return gulp.src('dist', { read: false, allowEmpty: true }).pipe(gulpClean());
-}
-
-exports.default = gulp.series(clean, build);
+exports.devWatch = devWatch;
+exports.default = gulp.series(cleanWrap(config.distPath), build);

@@ -8,9 +8,9 @@ const srcPath = config.srcPath;
 /**
  * acquire the json's path
  */
-function getJsonPathInfo(jsonPath) {
-  const dirPath = path.dirname(jsonPath);
-  const fileName = path.basename(jsonPath, '.json');
+function getPathInfo(entryPath, ext) {
+  const dirPath = path.dirname(entryPath);
+  const fileName = path.basename(entryPath, ext || '.json');
   const relative = path.relative(srcPath, dirPath);
   const fileBase = path.join(relative, fileName);
 
@@ -25,34 +25,53 @@ function getJsonPathInfo(jsonPath) {
 /**
  * check custom components is included
  */
-const checkProps = ['usingComponents', 'componentGenerics'];
-async function checkIncludedComponents(jsonPath, componentListMap) {
-  const json = _.readJson(jsonPath);
-  if (!json) throw new Error(`json is not valid: "${jsonPath}"`);
+const checkProps = ['usingComponents', 'componentGenerics', 'customAssets'];
+async function checkIncludedComponents(entryPath, componentListMap) {
+  let dirPath, fileName, fileBase;
 
-  const { dirPath, fileName, fileBase } = getJsonPathInfo(jsonPath);
+  if (entryPath.indexOf('.json') > -1) {
+    const json = _.readJson(entryPath);
+    if (!json) throw new Error(`json is not valid: "${entryPath}"`);
 
-  for (let i = 0, len = checkProps.length; i < len; i++) {
-    const checkProp = checkProps[i];
-    const checkPropValue = json[checkProp] || {};
-    const keys = Object.keys(checkPropValue);
+    const jsonInfo = getPathInfo(entryPath, '.json');
+    dirPath = jsonInfo.dirPath;
+    fileName = jsonInfo.fileName;
+    fileBase = jsonInfo.fileBase;
 
-    for (let j = 0, jlen = keys.length; j < jlen; j++) {
-      const key = keys[j];
-      let value =
-        typeof checkPropValue[key] === 'object' ? checkPropValue[key].default : checkPropValue[key];
-      if (!value) continue;
+    for (let i = 0, len = checkProps.length; i < len; i++) {
+      const checkProp = checkProps[i];
+      const checkPropValue = json[checkProp] || {};
+      const keys = Object.keys(checkPropValue);
 
-      value = _.transformPath(value, path.sep);
+      for (let j = 0, jlen = keys.length; j < jlen; j++) {
+        const key = keys[j];
+        let value =
+          typeof checkPropValue[key] === 'object' ? checkPropValue[key].default : checkPropValue[key];
+        if (!value) continue;
 
-      const componentPath = `${path.join(dirPath, value)}.json`;
-      const isExists = await _.checkFileExists(componentPath);
-      if (isExists) {
-        await checkIncludedComponents(componentPath, componentListMap);
+        value = _.transformPath(value, path.sep);
+
+        let componentPath = `${path.join(dirPath, value)}.json`;
+        let isExists = await _.checkFileExists(componentPath);
+        if (isExists) {
+          await checkIncludedComponents(componentPath, componentListMap);
+        }
+
+        componentPath = `${path.join(dirPath, value)}`;
+        isExists = await _.checkFileExists(componentPath);
+        if (isExists) {
+          await checkIncludedComponents(componentPath, componentListMap);
+        }
       }
     }
+  } else if (entryPath.indexOf('.png') > -1) {
+    const jsonInfo = getPathInfo(entryPath, '.png');
+    dirPath = jsonInfo.dirPath;
+    fileName = jsonInfo.fileName;
+    fileBase = jsonInfo.fileBase;
+  } else {
+    return;
   }
-
 
   let exists = await _.checkFileExists(path.join(dirPath, `${fileName}.wxml`));
   if (exists) {
@@ -75,6 +94,14 @@ async function checkIncludedComponents(jsonPath, componentListMap) {
   exists && (componentListMap.jsFileMap[fileBase] = `${path.join(dirPath, fileName)}.js`);
   exists = await _.checkFileExists(path.join(dirPath, `${fileName}.ts`));
   exists && (componentListMap.jsFileMap[fileBase] = `${path.join(dirPath, fileName)}.ts`);
+
+  // assets
+  exists = await _.checkFileExists(path.join(dirPath, `${fileName}.png`));
+  exists && componentListMap.assetsList.push(`${path.join(dirPath, fileName)}.png`);
+  exists = await _.checkFileExists(path.join(dirPath, `${fileName}.jpg`));
+  exists && componentListMap.assetsList.push(`${path.join(dirPath, fileName)}.jpg`);
+  exists = await _.checkFileExists(path.join(dirPath, `${fileName}.svg`));
+  exists && componentListMap.assetsList.push(`${path.join(dirPath, fileName)}.svg`);
 }
 
 module.exports = async function checkComponents(entry) {
@@ -85,13 +112,14 @@ module.exports = async function checkComponents(entry) {
     jsonFileList: [],
     jsFileList: [],
     tsFileList: [],
+    assetsList: [],
 
     jsFileMap: {}
   };
 
   const isExists = await _.checkFileExists(entry);
   if (!isExists) {
-    const { dirPath, fileName, fileBase } = getJsonPathInfo(entry);
+    const { dirPath, fileName, fileBase } = getPathInfo(entry, '.json');
 
     componentListMap.jsFileList.push(`${fileBase}.js`);
     componentListMap.jsFileMap[fileBase] = `${path.join(dirPath, fileName)}.js`;

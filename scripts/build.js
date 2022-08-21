@@ -66,7 +66,17 @@ async function buildJson() {
     .pipe(gulp.dest(config.distPath));
 }
 
+async function buildAssets() {
+  if (!mergedComponentListMap.assetsList.length) {
+    return;
+  }
+  
+  return gulp
+    .src(mergedComponentListMap.assetsList, { cwd: config.srcPath, base: config.srcPath })
+    .pipe(gulp.dest(config.distPath));
+}
+
 module.exports = gulp.series(
   getComponentListMap,
-  gulp.parallel(buildJs, buildLess, buildWxml, buildJson)
+  gulp.parallel(buildJs, buildLess, buildWxml, buildJson, buildAssets)
 );

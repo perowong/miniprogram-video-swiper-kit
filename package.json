@@ -12,7 +12,8 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "pre-commit": "lint-staged",
     "build": "gulp",
-    "build-release": "npm run build && node ./scripts/copy.js"
+    "build-release": "npm run build && node ./scripts/copy.js",
+    "dev-tiktok-swiper": "gulp devWatch --proj=tiktok-swiper"
   },
   "devDependencies": {
     "fs-extra": "^10.1.0",
@@ -22,6 +23,7 @@
     "gulp-rename": "^2.0.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.4.0",
+    "minimist": "^1.2.6",
     "miniprogram-api-typings": "^3.4.6",
     "prettier": "^2.6.2",
     "rollup": "^2.78.1",

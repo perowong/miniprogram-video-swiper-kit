@@ -15,7 +15,7 @@
         bindtouchmove="onTouchMove"
         bindtouchend="onTouchEnd"
       >
-        <block wx:elif="{{(index === current || index === current - 1 || index === current + 1)}}">
+        <block wx:if="{{(index === current || index === current - 1 || index === current + 1)}}">
           <video
             class="video"
             id="videoSwiper-{{item.id}}"
