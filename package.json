@@ -1,7 +1,7 @@
 {
   "name": "miniprogram-video-components",
   "version": "1.0.0",
-  "description": "An out-of-box video components of miniprogram, such as videoSwiper, slider, commentsHalfDialog, tiktokSocialBar, wechatChannelSocialBar, etc.",
+  "description": "An out-of-box miniprogram components kit in video community scenario, such as video-swiper, slider, comments-half-dialog, tiktok-panel, wechat-channel-panel, etc.",
   "miniprogram": "dist",
   "repository": "",
   "bugs": "",
