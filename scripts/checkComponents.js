@@ -46,7 +46,9 @@ async function checkIncludedComponents(entryPath, componentListMap) {
       for (let j = 0, jlen = keys.length; j < jlen; j++) {
         const key = keys[j];
         let value =
-          typeof checkPropValue[key] === 'object' ? checkPropValue[key].default : checkPropValue[key];
+          typeof checkPropValue[key] === 'object'
+            ? checkPropValue[key].default
+            : checkPropValue[key];
         if (!value) continue;
 
         value = _.transformPath(value, path.sep);

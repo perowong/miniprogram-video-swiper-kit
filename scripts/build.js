@@ -70,7 +70,7 @@ async function buildAssets() {
   if (!mergedComponentListMap.assetsList.length) {
     return;
   }
-  
+
   return gulp
     .src(mergedComponentListMap.assetsList, { cwd: config.srcPath, base: config.srcPath })
     .pipe(gulp.dest(config.distPath));

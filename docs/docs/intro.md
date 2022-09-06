@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Intro
 
-This is an out-of-box open-source miniprogram components kit in video community scenario. 
+This is an out-of-box open-source miniprogram components kit in video community scenario.
 It includes basic UI components, such as `video-swiper`, `slider`, `comments-half-dialog`,  
 and some business UI components like `tiktok-panel`, and `wechat-channel-panel`, etc.
 
@@ -19,4 +19,3 @@ why this project?
 ## Tutorial Intro
 
 how to start
-

@@ -6,7 +6,6 @@ const cleanWrap = require('./clean');
 
 const argv = minimist(process.argv.slice(2));
 
-
 const devSrc = config.devPath(argv.proj);
 
 function watchCallback(cb) {
@@ -18,11 +17,11 @@ function watchCallback(cb) {
 function watch() {
   console.log('watch proj: ', argv.proj);
 
-  return gulp.watch('./src/**/*')
-  .on('change', watchCallback)
-  .on('add', watchCallback)
-  .on('unlink', watchCallback);
+  return gulp
+    .watch('./src/**/*')
+    .on('change', watchCallback)
+    .on('add', watchCallback)
+    .on('unlink', watchCallback);
 }
-
 
 module.exports = gulp.series(cleanWrap(devSrc), watchCallback, watch);

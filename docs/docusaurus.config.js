@@ -18,7 +18,7 @@ const config = {
 
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en']
   },
 
   presets: [
@@ -30,21 +30,19 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/perowong/miniprogram-video-components',
+          editUrl: 'https://github.com/perowong/miniprogram-video-components'
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/perowong/miniprogram-video-components',
+          editUrl: 'https://github.com/perowong/miniprogram-video-components'
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
-      }),
-    ],
+          customCss: require.resolve('./src/css/custom.css')
+        }
+      })
+    ]
   ],
 
   themeConfig:
@@ -54,7 +52,7 @@ const config = {
         title: 'Miniprogram-video-components',
         logo: {
           alt: 'Miniprogram-video-components Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.svg'
         },
         items: [
           {
@@ -63,17 +61,17 @@ const config = {
             position: 'right',
             activeBasePath: 'docs',
             items: [
-              { label: 'Getting Started',  to: 'docs/category/getting-started' },
-              { label: 'Components - Basics',  to: 'docs/category/components-basics' },
+              { label: 'Getting Started', to: 'docs/category/getting-started' },
+              { label: 'Components - Basics', to: 'docs/category/components-basics' }
             ]
           },
-          {to: '/blog', label: 'Blog', position: 'right'},
+          { to: '/blog', label: 'Blog', position: 'right' },
           {
             href: 'https://github.com/perowong/miniprogram-video-components',
             label: 'GitHub',
-            position: 'right',
+            position: 'right'
           }
-        ],
+        ]
       },
       footer: {
         style: 'dark',
@@ -83,49 +81,49 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
+                to: '/docs/intro'
+              }
+            ]
           },
           {
             title: 'Community',
             items: [
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/perowong',
+                href: 'https://discordapp.com/invite/perowong'
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/perowong',
-              },
-            ],
+                href: 'https://twitter.com/perowong'
+              }
+            ]
           },
           {
             title: 'More',
             items: [
               {
                 label: 'Blog',
-                to: '/blog',
+                to: '/blog'
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/perowong/miniprogram-video-components',
-              },
-            ],
-          },
+                href: 'https://github.com/perowong/miniprogram-video-components'
+              }
+            ]
+          }
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Miniprogram-video-components@Pero`,
+        copyright: `Copyright © ${new Date().getFullYear()} Miniprogram-video-components@Pero`
       },
       prism: {
         theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        darkTheme: darkCodeTheme
       },
       colorMode: {
         defaultMode: 'light',
         disableSwitch: false,
-        respectPrefersColorScheme: true,
+        respectPrefersColorScheme: true
       }
-    }),
+    })
 };
 
 module.exports = config;

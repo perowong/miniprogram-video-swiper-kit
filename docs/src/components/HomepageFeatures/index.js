@@ -11,30 +11,32 @@ const FeatureList = [
         miniprogram-video-components were designed from the ground up to be easily installed and
         used to integrate into your miniprogram and running quickly.
       </>
-    ),
+    )
   },
   {
     title: 'Focus on What Matters',
     Svg: require('@site/static/img/undraw_miniprogram_tree.svg').default,
     description: (
       <>
-        Such as video-swiper lets you focus on your community product features, and we&apos;ll do the chores. Go
-        ahead and move the components you'd like into your <code>features</code> directory;)
+        Such as video-swiper lets you focus on your community product features, and we&apos;ll do
+        the chores. Go ahead and move the components you'd like into your <code>features</code>{' '}
+        directory;)
       </>
-    ),
+    )
   },
   {
     title: 'Flexible',
     Svg: require('@site/static/img/undraw_miniprogram_wechat.svg').default,
     description: (
       <>
-        These components works individually in weChat miniprogram, and also can combined together to works in your particular business scenario.
+        These components works individually in weChat miniprogram, and also can combined together to
+        works in your particular business scenario.
       </>
-    ),
-  },
+    )
+  }
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description }) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
