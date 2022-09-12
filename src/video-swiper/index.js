@@ -1,8 +1,5 @@
 let startY, endY, isOpacityChanged;
-const OPACITY_DRAG_DISTANCE = 20;
-const OPACITY_WHEN_SWIPING = 0.3;
-const ALL_CLEAR = 0;
-const NO_OPACITY = 1;
+import { OPACITY_DRAG_DISTANCE, OPACITY_WHEN_SWIPING, ALL_CLEAR, NO_OPACITY } from './const';
 
 let waitingTimer = null;
 
@@ -215,7 +212,7 @@ Component({
       const { current, list, showSlider, sliderThreshold } = this.data;
       const curItem = list[current];
 
-      // make it compatible with some item without id (e.g. advertisement) or exception
+      // make it compatible with some item without id (e.g. wx advertisement) or exception
       // [wx bug] currentTime and duration sometimes would be 0 and null
       if (!curItem || !curItem.id || !currentTime || !duration) {
         return;
@@ -291,7 +288,6 @@ Component({
       this.createSelectorQuery()
         .select(`#${videoId}`)
         .context(function (res) {
-          // 节点对应的 Context 对象。如：选中的节点是 <video> 组件，那么此处即返回 VideoContext 对象
           res && res.context[eventName] && res.context[eventName](args);
         })
         .exec();
