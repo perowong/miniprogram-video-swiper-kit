@@ -1,12 +1,8 @@
-const screenWidth = systemInfo.screenWidth;
+import { SCREEN_WIDTH, SLIDER_STATUS_NORMAL, SLIDER_STATUS_ACTIVE, SLIDER_STATUS_DRAG, STATUS_CHANGE_TIME } from './const';
 
 let sliderHandlerStartX = 0,
   sliderHandlerEndX = 0;
-const SLIDER_STATUS_NORMAL = 'normal';
-const SLIDER_STATUS_ACTIVE = 'active';
-const SLIDER_STATUS_DRAG = 'drag';
 
-const STATUS_CHANGE_TIME = 3 * 1000;
 let statusChangeTimer = null;
 
 let lastDeltaProgress = 0;
@@ -22,10 +18,9 @@ Component({
    * component's properties
    */
   properties: {
-    // show: true,
-    duration: 0,
-    isProgressActive: false,
-    infoAreaBottom: 0,
+    duration: Number,
+    isProgressActive: Boolean,
+    infoAreaBottom: Number,
     progress: {
       type: Number,
       value: 0,
@@ -91,7 +86,7 @@ Component({
       const { touches } = e;
       sliderHandlerEndX = touches[0].pageX;
 
-      const deltaProgress = ((sliderHandlerEndX - sliderHandlerStartX) / screenWidth) * 100;
+      const deltaProgress = ((sliderHandlerEndX - sliderHandlerStartX) / SCREEN_WIDTH) * 100;
 
       if (Math.abs(lastDeltaProgress - deltaProgress) < 1) {
         return;
