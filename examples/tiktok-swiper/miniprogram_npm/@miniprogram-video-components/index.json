@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "videoSwiper": "./video-swiper/index",
-    "slider": "./slider/index"
-  }
-}
