@@ -34,7 +34,7 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
-miniprogram_npm
+miniprogram_npm/
 
 # Optional npm cache directory
 .npm
