@@ -1,6 +1,6 @@
 let startY, endY, isOpacityChanged;
 import { loadingIcon, playIcon } from '../icons/index';
-import { OPACITY_DRAG_DISTANCE, OPACITY_WHEN_SWIPING, ALL_CLEAR, NO_OPACITY, ICONS_PREFIX } from './const';
+import { OPACITY_DRAG_DISTANCE, OPACITY_WHEN_SWIPING, ALL_CLEAR, NO_OPACITY } from './const';
 
 let waitingTimer = null;
 
