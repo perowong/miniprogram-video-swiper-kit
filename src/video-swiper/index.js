@@ -21,14 +21,13 @@ const initialData = () => ({
 
 Component({
   options: {
-    pureDataPattern: /^_/
+    pureDataPattern: /^_/,
+    multipleSlots: true
   },
   /**
    * component's properties
    */
   properties: {
-    shareType: String,
-    showDebugInfo: Boolean,
     safeBottom: Number,
     infoAreaBottom: Number,
     list: Array,

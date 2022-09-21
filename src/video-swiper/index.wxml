@@ -16,39 +16,50 @@
         bindtouchend="onTouchEnd"
       >
         <block wx:if="{{(index === current || index === current - 1 || index === current + 1)}}">
-          <video
-            class="video"
-            id="videoSwiper-{{item.id}}"
-            data-item-id="{{item.id}}"
-            data-idx="{{index}}"
-            show-center-play-btn="{{false}}"
-            enable-progress-gesture="{{false}}"
-            controls="{{false}}"
-            loop
-            src="{{item.url}}"
-            poster="{{isWaitingItems[item.id] ? item.url : ''}}"
-            bindtap="onVideoTap"
-            bindplay="onVideoPlay"
-            bindloadedmetadata="onVideoLoadedMetadata"
-            bindpause="onVideoPause"
-            bindtimeupdate="onVideoTimeUpdate"
-            object-fit="{{item.vw/item.vh <= 0.6 ? 'cover' : 'contain'}}"
-          ></video>
-          <view
-            wx:if="{{isWaitingItems[item.id]}}"
-            class="icon-in-middle loading-icon"
-          >
-            <text class="weui-primary-loading show-more-loading loading-size">
-              <text class="weui-primary-loading__dot"></text>
-            </text>
-          </view>
-          <image
-            wx:if="{{isPlayingItems[item.id] === false && !isWaitingItems[item.id]}}"
-            class="icon-in-middle play-icon"
-            data-swiper-item-id="videoSwiper-{{item.id}}"
-            data-item-id="{{item.id}}"
-            src="./icons/play.png"
-            catchtap="onVideoTap"></image>
+          <!-- other media zone, like article, music, etc. -->
+          <block wx:if="{{item.type === 'nonVideo'}}">
+            <slot name="nonVideoItem"></slot>
+          </block>
+
+          <!-- video zone -->
+          <block wx:else>
+            <video
+              class="video"
+              id="videoSwiper-{{item.id}}"
+              data-item-id="{{item.id}}"
+              data-idx="{{index}}"
+              show-center-play-btn="{{false}}"
+              enable-progress-gesture="{{false}}"
+              controls="{{false}}"
+              loop
+              src="{{item.url}}"
+              poster="{{isWaitingItems[item.id] ? item.url : ''}}"
+              bindtap="onVideoTap"
+              bindplay="onVideoPlay"
+              bindloadedmetadata="onVideoLoadedMetadata"
+              bindpause="onVideoPause"
+              bindtimeupdate="onVideoTimeUpdate"
+              object-fit="{{item.vw/item.vh <= 0.6 ? 'cover' : 'contain'}}"
+            >
+              <slot name="aboveVideo"></slot>
+            </video>
+            <view
+              wx:if="{{isWaitingItems[item.id]}}"
+              class="icon-in-middle loading-icon"
+            >
+              <text class="weui-primary-loading show-more-loading loading-size">
+                <text class="weui-primary-loading__dot"></text>
+              </text>
+            </view>
+            <image
+              wx:if="{{isPlayingItems[item.id] === false && !isWaitingItems[item.id]}}"
+              class="icon-in-middle play-icon"
+              data-swiper-item-id="videoSwiper-{{item.id}}"
+              data-item-id="{{item.id}}"
+              src="./icons/play.png"
+              catchtap="onVideoTap"
+            ></image>
+          </block>
         </block>
 
         <block wx:else>
