@@ -8,7 +8,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_miniprogram_mountain.svg').default,
     description: (
       <>
-        miniprogram-video-components were designed from the ground up to be easily installed and
+        miniprogram-video-swiper-kit were designed from the ground up to be easily installed and
         used to integrate into your miniprogram and running quickly.
       </>
     )

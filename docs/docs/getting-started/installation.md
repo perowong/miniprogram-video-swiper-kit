@@ -10,10 +10,10 @@ In your miniprogram project root directory with package.json, run:
 
 ```
 # npm
-npm i @miniprogram-video-components/video-swiper
+npm i @miniprogram-video-swiper-kit/video-swiper
 
 # yarn
-yarn add @miniprogram-video-components/video-swiper
+yarn add @miniprogram-video-swiper-kit/video-swiper
 ```
 
 You can check out this weChat miniprogram official doc to figure out 
@@ -22,16 +22,16 @@ You can check out this weChat miniprogram official doc to figure out
 > If you want to install other components, just run:
 > ```
 > # npm
-> npm i @miniprogram-video-components/{{component-name}}
+> npm i @miniprogram-video-swiper-kit/{{component-name}}
 > 
 > # yarn
-> yarn add @miniprogram-video-components/{{component-name}}
+> yarn add @miniprogram-video-swiper-kit/{{component-name}}
 > ```
 
 ### All available components
 
-- [video-swiper]()
-- [slider]()
+- video-swiper
+- slider
 - [ ] tiktok-panel
 - [ ] wechat-channel-panel
 
@@ -41,7 +41,7 @@ You can check out this weChat miniprogram official doc to figure out
 
 ```json
 "usingComponents": {
-  "videoSwiper": "@miniprogram-video-components/video-swiper"
+  "videoSwiper": "@miniprogram-video-swiper-kit/video-swiper"
 }
 ```
 

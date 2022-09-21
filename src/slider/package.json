@@ -1,5 +1,5 @@
 {
-  "name": "@miniprogram-video-components/slider",
+  "name": "@miniprogram-video-swiper-kit/slider",
   "version": "0.0.1",
   "description": "",
   "main": "miniprogram_dist/index.js",

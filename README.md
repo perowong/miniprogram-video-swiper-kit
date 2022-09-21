@@ -1,13 +1,13 @@
-# Miniprogram-video-components [![NPM Version](https://img.shields.io/npm/v/@miniprogram-video-components/video-swiper?color=brightgreen)](https://www.npmjs.com/package/@miniprogram-video-components/video-swiper) 
+# Miniprogram-video-swiper-kit [![NPM Version](https://img.shields.io/npm/v/@miniprogram-video-swiper-kit/video-swiper?color=brightgreen)](https://www.npmjs.com/package/@miniprogram-video-swiper-kit/video-swiper) 
 
-![Miniprogram-video-components](https://raw.githubusercontent.com/perowong/miniprogram-video-components/main/logo/miniprogram-video-components-logo.svg)
+![Miniprogram-video-swiper-kit](https://raw.githubusercontent.com/perowong/miniprogram-video-swiper-kit/main/logo/miniprogram-video-swiper-kit-logo.svg)
 
 
 This is an out-of-box open-source miniprogram components kit in video community scenario.  
 It includes basic UI components, such as `video-swiper`, `slider`, `comments-half-dialog`,  
 and some business UI components like `tiktok-panel`, and `wechat-channel-panel`, etc.
 
-Miniprogram-video-components is based on the real massive user product in weChat miniprogram, and
+Miniprogram-video-swiper-kit is based on the real massive user product in weChat miniprogram, and
 features a suite of customization options that make it easy to implement your own custom business
 design on top of these components.
 
@@ -28,10 +28,10 @@ In your miniprogram project root directory with package.json, run:
 
 ```
 # npm
-npm i @miniprogram-video-components/video-swiper
+npm i @miniprogram-video-swiper-kit/video-swiper
 
 # yarn
-yarn add @miniprogram-video-components/video-swiper
+yarn add @miniprogram-video-swiper-kit/video-swiper
 ```
 
 You can check out this weChat miniprogram official doc to figure out 
@@ -40,17 +40,17 @@ You can check out this weChat miniprogram official doc to figure out
 > If you want to install other components, just run:
 > ```
 > # npm
-> npm i @miniprogram-video-components/{{component-name}}
+> npm i @miniprogram-video-swiper-kit/{{component-name}}
 > 
 > # yarn
-> yarn add @miniprogram-video-components/{{component-name}}
+> yarn add @miniprogram-video-swiper-kit/{{component-name}}
 > ```
 
 Check out [all available components here]().
 
 ## Documentation
 
-The miniprogram-video-components docs are located at https://miniprogram-video-components.overio.spcace
+The miniprogram-video-swiper-kit docs are located at https://miniprogram-video-swiper-kit.overio.spcace
 
 - [Introduction]()
 - Getting Started
@@ -82,11 +82,11 @@ and `wechat-channel-panel` etc., with business bias features to build user frien
 
 ## Logo
 
-You can find the designed logo [on GitHub](https://github.com/perowong/miniprogram-video-components/tree/main/logo).
+You can find the designed logo [on GitHub](https://github.com/perowong/miniprogram-video-swiper-kit/tree/main/logo).
 
 ## License
 
-[MIT](https://github.com/perowong/miniprogram-video-components/blob/main/LICENSE)
+[MIT](https://github.com/perowong/miniprogram-video-swiper-kit/blob/main/LICENSE)
 
 
 > More doc is on the way...

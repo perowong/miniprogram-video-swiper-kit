@@ -7,6 +7,6 @@
   "disableScroll": true,
   "initialRenderingCache": "static",
   "usingComponents": {
-    "videoSwiper": "@miniprogram-video-components/video-swiper"
+    "videoSwiper": "@miniprogram-video-swiper-kit/video-swiper"
   }
 }

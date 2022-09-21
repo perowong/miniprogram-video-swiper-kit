@@ -6,15 +6,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Miniprogram-video-components',
+  title: 'Miniprogram-video-swiper-kit',
   tagline: `An out-of-box miniprogram components kit in video community scenario`,
-  url: 'https://i.overio.space/miniprogram-video-components',
+  url: 'https://i.overio.space/miniprogram-video-swiper-kit',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'Pero Wong', // Usually your GitHub org/user name.
-  projectName: 'miniprogram-video-components', // Usually your repo name.
+  projectName: 'miniprogram-video-swiper-kit', // Usually your repo name.
 
   i18n: {
     defaultLocale: 'en',
@@ -30,13 +30,13 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/perowong/miniprogram-video-components'
+          editUrl: 'https://github.com/perowong/miniprogram-video-swiper-kit'
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/perowong/miniprogram-video-components'
+          editUrl: 'https://github.com/perowong/miniprogram-video-swiper-kit'
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css')
@@ -49,9 +49,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Miniprogram-video-components',
+        title: 'Miniprogram-video-swiper-kit',
         logo: {
-          alt: 'Miniprogram-video-components Logo',
+          alt: 'Miniprogram-video-swiper-kit Logo',
           src: 'img/logo.svg'
         },
         items: [
@@ -67,7 +67,7 @@ const config = {
           },
           { to: '/blog', label: 'Blog', position: 'right' },
           {
-            href: 'https://github.com/perowong/miniprogram-video-components',
+            href: 'https://github.com/perowong/miniprogram-video-swiper-kit',
             label: 'GitHub',
             position: 'right'
           }
@@ -107,12 +107,12 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/perowong/miniprogram-video-components'
+                href: 'https://github.com/perowong/miniprogram-video-swiper-kit'
               }
             ]
           }
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Miniprogram-video-components@Pero`
+        copyright: `Copyright © ${new Date().getFullYear()} Miniprogram-video-swiper-kit@Pero`
       },
       prism: {
         theme: lightCodeTheme,

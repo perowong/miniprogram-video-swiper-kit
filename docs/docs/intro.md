@@ -8,7 +8,7 @@ This is an out-of-box open-source miniprogram components kit in video community 
 It includes basic UI components, such as `video-swiper`, `slider`, `comments-half-dialog`,  
 and some business UI components like `tiktok-panel`, and `wechat-channel-panel`, etc.
 
-Miniprogram-video-components is based on the real massive user product in weChat miniprogram, and
+Miniprogram-video-swiper-kit is based on the real massive user product in weChat miniprogram, and
 features a suite of customization options that make it easy to implement your own custom business
 design on top of these components.
 
