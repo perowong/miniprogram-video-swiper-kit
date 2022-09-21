@@ -1,8 +1,4 @@
 {
   "component": true,
-  "usingComponents": {},
-  "customAssets": {
-    "loadingIcon": "./icons/loading.png",
-    "playIcon": "./icons/play.png"
-  }
+  "usingComponents": {}
 }

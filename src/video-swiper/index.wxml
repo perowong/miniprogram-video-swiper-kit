@@ -56,14 +56,14 @@
               class="icon-in-middle play-icon"
               data-swiper-item-id="videoSwiper-{{item.id}}"
               data-item-id="{{item.id}}"
-              src="./icons/play.png"
+              src="{{playIcon}}"
               catchtap="onVideoTap"
             ></image>
           </block>
         </block>
 
         <block wx:else>
-          <image class="icon-in-middle loading-image" mode="aspectFit" src="./icons/loading.png"></image>
+          <image class="icon-in-middle loading-image" mode="aspectFit" src="{{loadingIcon}}"></image>
         </block>
       </view>
     </swiper-item>

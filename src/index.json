@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "videoSwiper": "./video-swiper/index",
+    "tiktokSwiper": "./tiktok-swiper/index",
     "slider": "./slider/index"
   }
 }

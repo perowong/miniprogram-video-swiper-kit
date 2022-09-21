@@ -1,5 +1,6 @@
 let startY, endY, isOpacityChanged;
-import { OPACITY_DRAG_DISTANCE, OPACITY_WHEN_SWIPING, ALL_CLEAR, NO_OPACITY } from './const';
+import { loadingIcon, playIcon } from '../icons/index';
+import { OPACITY_DRAG_DISTANCE, OPACITY_WHEN_SWIPING, ALL_CLEAR, NO_OPACITY, ICONS_PREFIX } from './const';
 
 let waitingTimer = null;
 
@@ -29,16 +30,7 @@ Component({
    */
   properties: {
     safeBottom: Number,
-    infoAreaBottom: Number,
     list: Array,
-    showSlider: {
-      type: Boolean,
-      value: true
-    },
-    sliderThreshold: {
-      type: Number,
-      value: 30
-    },
     mutateCurrent: {
       type: Number,
       observer(newVal, oldVal) {
@@ -48,7 +40,17 @@ Component({
           });
         }
       }
-    }
+    },
+
+    // ui default icon
+    playIcon: {
+      type: String,
+      value: playIcon
+    },
+    loadingIcon: {
+      type: String,
+      value: loadingIcon
+    },
   },
 
   /**

@@ -1,6 +1,6 @@
 {
   "name": "@miniprogram-video-swiper-kit/slider",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "An out-of-box miniprogram components kit in video community scenario. This is slider.",
   "main": "miniprogram_dist/index.js",
   "scripts": {
