@@ -1,4 +1,4 @@
 <!--pages/home/home.wxml-->
-<videoSwiper
+<tiktokSwiper
   list="{{list}}"
-></videoSwiper>
+></tiktokSwiper>
