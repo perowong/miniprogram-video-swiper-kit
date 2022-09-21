@@ -1,0 +1,22 @@
+{
+  "name": "@miniprogram-video-swiper-kit/tiktok-swiper",
+  "version": "0.0.2",
+  "description": "An out-of-box miniprogram components kit in video community scenario. This is tiktok-swiper.",
+  "main": "miniprogram_dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "video",
+    "swiper",
+    "tiktok",
+    "douyin",
+    "miniprogram"
+  ],
+  "author": "Pero Wong <ynwangpeng@gmail.com>",
+  "repository": "https://github.com/perowong/miniprogram-video-swiper-kit",
+  "dependencies": {
+    "@miniprogram-video-swiper-kit/video-swiper": "^1.0.0",
+    "@miniprogram-video-swiper-kit/slider": "^1.0.0"
+  }
+}

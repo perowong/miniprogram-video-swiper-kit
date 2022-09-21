@@ -1,0 +1,3 @@
+<videoSwiper
+  list="{{list}}"
+></videoSwiper>
