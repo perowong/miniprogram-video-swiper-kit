@@ -1,7 +1,7 @@
 {
   "name": "@miniprogram-video-swiper-kit/slider",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.0.2",
+  "description": "An out-of-box miniprogram components kit in video community scenario. This is slider.",
   "main": "miniprogram_dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,5 +12,6 @@
     "slider",
     "miniprogram"
   ],
-  "author": "Pero Wong <ynwangpeng@gmail.com>"
+  "author": "Pero Wong <ynwangpeng@gmail.com>",
+  "repository": "https://github.com/perowong/miniprogram-video-swiper-kit"
 }

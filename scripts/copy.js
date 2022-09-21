@@ -14,5 +14,8 @@ list.forEach((file) => {
     fs.ensureDirSync(npmDist);
     exec(`cp -a ${dist}/${file}/* ${root}/${file}/${dist}`);
     exec(`cp -a src/${file}/package.json ${root}/${file}/package.json`);
+
+    exec(`cp -a LICENSE ${root}/${file}/LICENSE`);
+    exec(`cp -a README.md ${root}/${file}/README.md`);
   }
 });
