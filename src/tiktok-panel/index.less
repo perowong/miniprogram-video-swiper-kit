@@ -1,0 +1,100 @@
+.tiktok-panel {
+  position: absolute;
+  bottom: 40rpx;
+  right: 22rpx;
+  display: flex;
+  flex-direction: column;
+  transition: opacity .3s;
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32rpx;
+    position: relative;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .toggle {
+    width: 76rpx;
+    height: 76rpx;
+    position: relative;
+
+    .icon {
+      transition: all .3s;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .show {
+      visibility: visible;
+      transform: scale(1);
+    }
+  
+    .hidden {
+      visibility: hidden;
+      transform: scale(0);
+    }
+  }
+
+  .icon {
+    width: 76rpx;
+    height: 76rpx;
+  }
+
+  .music {
+    position: relative;
+    margin-top: 18rpx;
+    background: #191919;
+    // background: linear-gradient(109deg, #202020 0%, #454545 49%, #202020 100%);
+    border-radius: 50%;
+
+    .avatar {
+      position: absolute;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 44rpx;
+      height: 44rpx;
+    }
+  }
+
+  .text {
+    line-height: 1.5;
+    font-size: 28rpx;
+    font-weight: 500;
+    text-shadow: 2rpx 2rpx 4rpx rgba(0,0,0,0.3);
+    color: #FFFFFF;
+  }
+}
+
+.clear-share-btn-style {
+  width: auto !important;
+  margin: 0;
+  background-color: transparent;
+  padding: 0;
+}
+
+@-webkit-keyframes rotate {
+  from{-webkit-transform: rotate(0deg)}
+  to{-webkit-transform: rotate(360deg)}
+}
+@keyframes rotate {
+  from{transform: rotate(0deg)}
+  to{transform: rotate(359deg)}
+}
+
+.rotate {
+  -webkit-animation: rotate 10s linear infinite;
+  animation: rotate 10s linear infinite;
+}
+.paused {
+  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+}

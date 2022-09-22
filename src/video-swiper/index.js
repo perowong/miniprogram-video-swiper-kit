@@ -61,6 +61,7 @@ Component({
     showSliderDurationThreshold: Number, // set in millisecond
     sliderBottom: Number,
 
+    swiperItemPanelBottom: Number,
     disableOpacityWhenSwiping: Boolean
   },
 
@@ -147,7 +148,7 @@ Component({
         this._playVideo(this._idPrefix(currentItemId), currentItemId, 'swiperAnimationFinish');
       }
 
-      this._triggerEvent('swipeVideoChanged', { current, itemId: currentItemId });
+      this._triggerEvent('onSwiperChanged', { current, itemId: currentItemId });
     },
 
     /**

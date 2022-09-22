@@ -49,7 +49,7 @@ async function checkIncludedComponents(entryPath, componentListMap) {
           typeof checkPropValue[key] === 'object'
             ? checkPropValue[key].default
             : checkPropValue[key];
-        if (!value) continue;
+        if (!value || typeof value === 'boolean') continue;
 
         value = _.transformPath(value, path.sep);
 

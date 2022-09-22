@@ -2,5 +2,8 @@
   "component": true,
   "usingComponents": {
     "slider": "../slider"
+  },
+  "componentGenerics": {
+    "swiperItemPanel": true
   }
 }

@@ -1,4 +1,8 @@
-<!--pages/home/home.wxml-->
-<tiktokSwiper
+<videoSwiper
   list="{{list}}"
-></tiktokSwiper>
+  sliderBottom="{{40}}"
+  showSliderDurationThreshold="{{30*1000}}"
+  generic:swiperItemPanel="tiktokPanel"
+  swiperItemPanelBottom="{{50}}"
+  bind:onSwiperChanged="onSwiperChanged"
+></videoSwiper>

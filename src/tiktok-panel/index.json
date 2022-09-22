@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {},
+  "customAssets": {
+    "likeIcon": "./icons/like.png",
+    "likedIcon": "./icons/liked.png",
+    "commentIcon": "./icons/comment.png",
+    "shareIcon": "./icons/share.png"
+  }
+}

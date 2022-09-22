@@ -1,0 +1,34 @@
+<view class="tiktok-panel" style="opacity: {{opacity}};padding-bottom: {{bottom}}px;">
+  <view class="box" catchtap="onLikeTap">
+    <view class="toggle">
+      <image class="icon {{item.hasLiked ? 'hidden' : 'show'}}" src="./icons/like.png"></image>
+      <image class="icon {{item.hasLiked ? 'show' : 'hidden'}}" src="./icons/liked.png"></image>
+    </view>
+    <text class="text">{{item.likeText}}</text>
+  </view>
+
+  <view class="box" catchtap="onCommentTap">
+    <image class="icon" src="./icons/comment.png"></image>
+    <text class="text">{{item.commentText}}</text>
+  </view>
+
+  <button
+    open-type="share"
+    class="clear-share-btn-style box"
+    style="z-index: 10100;"
+    catchtap="onShareTap"
+  >
+    <view class="toggle">
+      <image class="icon show" src="./icons/share.png"></image>
+    </view>
+    <text class="text">{{item.shareText}}</text>
+  </button>
+
+  <view class="box">
+    <view
+      class="icon music {{isCurrent ? 'rotate' : ''}} {{!isPlaying ? 'paused' : ''}}"
+    >
+      <image class="avatar" src="{{item.musicCover}}"></image>
+    </view>
+  </view>
+</view>
