@@ -1,4 +1,4 @@
-<view class="video-slider" style="margin-bottom: {{infoAreaBottom}}px;">
+<view class="video-slider" style="margin-bottom: {{bottom}}px;">
   <view class="weui-slider__inner slider slider-{{sliderStatus}} {{isProgressActive ? 'slider-active' : ''}}">
     <view style="width: {{selfProgress + '%'}};" class="weui-slider__track slider-track slider-track-{{sliderStatus}} {{isProgressActive ? 'slider-track-active' : ''}}"></view>
     <view style="left: {{selfProgress + '%'}};" class="slider-handler slider-handler-{{sliderStatus}} {{isProgressActive ? 'slider-handler-active' : ''}}">
@@ -11,7 +11,7 @@
     </view>
   </view>
 </view>
-<view wx:if="{{sliderStatus === 'drag'}}" class="time-ctn">
+<view wx:if="{{sliderStatus === 'drag'}}" class="time-ctn" style="margin-bottom: {{bottom}}px;">
   <view class="time current-time">{{curTime}}</view>
   <view class="divider">/</view>
   <view class="time">{{videoTime}}</view>

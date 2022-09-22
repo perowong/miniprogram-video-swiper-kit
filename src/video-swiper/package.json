@@ -12,5 +12,8 @@
     "miniprogram"
   ],
   "author": "Pero Wong <ynwangpeng@gmail.com>",
-  "repository": "https://github.com/perowong/miniprogram-video-swiper-kit"
+  "repository": "https://github.com/perowong/miniprogram-video-swiper-kit",
+  "dependencies": {
+    "@miniprogram-video-swiper-kit/slider": "^1.0.0"
+  }
 }

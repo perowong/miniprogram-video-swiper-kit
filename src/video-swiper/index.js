@@ -30,6 +30,7 @@ Component({
    */
   properties: {
     safeBottom: Number,
+
     list: Array,
     mutateCurrent: {
       type: Number,
@@ -51,6 +52,16 @@ Component({
       type: String,
       value: loadingIcon
     },
+
+    // slider
+    enableSlider: {
+      type: Boolean,
+      value: true
+    },
+    showSliderDurationThreshold: Number, // set in millisecond
+    sliderBottom: Number,
+
+    disableOpacityWhenSwiping: Boolean
   },
 
   /**
@@ -59,12 +70,12 @@ Component({
   data: initialData(),
 
   lifetimes: {
-    attached() {
+    /* attached() {
       wx.onAppHide(() => {
-        const { current } = this.data;
-        this.triggerEvent('releaseVideoSwiperWhenAppHide', { current, ctx: this });
+        const { current, list } = this.data;
+        this._triggerEvent('releaseVideoSwiperWhenAppHide', { current, itemId: list[current]?.id, ctx: this });
       });
-    }
+    } */
   },
 
   /**
@@ -210,7 +221,7 @@ Component({
         }
       } = e;
 
-      const { current, list, showSlider, sliderThreshold } = this.data;
+      const { current, list, enableSlider, showSliderDurationThreshold } = this.data;
       const curItem = list[current];
 
       // make it compatible with some item without id (e.g. wx advertisement) or exception
@@ -225,16 +236,20 @@ Component({
         item: curItem,
         // [wx bug, time thread bug] the previous video's ontimeupdate is still active after swiping to the next video small second.
         playItemId: itemId,
+
         currentTime,
-        duration
+        currentTimeMilliSecond: currentTime * 1000,
+        duration,
+        durationMillisecond: curItem.du || duration * 1000
       });
 
-      if (showSlider && duration >= sliderThreshold) {
+      if (enableSlider && curItem.du && duration * 1000 >= showSliderDurationThreshold) {
         this.setData({
           sliderProgress: (currentTime / duration) * 100
         });
       }
 
+      // [wx bug] sometimes wx will still play the last one video
       if (itemId !== curItem.id) {
         this._pauseVideo(this._idPrefix(itemId), itemId, 'timeUpdate');
       }
@@ -331,11 +346,19 @@ Component({
      * control component's opacity
      */
     onTouchStart(e) {
+      if (this.data.disableOpacityWhenSwiping) {
+        return;
+      }
+
       const { touches } = e;
       startY = touches[0].pageY;
     },
 
     onTouchMove(e) {
+      if (this.data.disableOpacityWhenSwiping) {
+        return;
+      }
+
       const { touches } = e;
       endY = touches[0].pageY;
 
@@ -351,6 +374,10 @@ Component({
     },
 
     onTouchEnd(e) {
+      if (this.data.disableOpacityWhenSwiping) {
+        return;
+      }
+
       startY = 0;
       endY = 0;
       this.setData({ infoOpacity: NO_OPACITY }, () => {
@@ -367,11 +394,11 @@ Component({
 
     onSliderDragEnd({ detail: { progress } }) {
       const { current, list } = this.data;
-      const curPost = list[current];
+      const curItem = list[current];
 
       this._seekVideo(
-        this._idPrefix(curPost.id),
-        (curPost.du / 1000) * (progress / 100),
+        this._idPrefix(curItem.id),
+        (curItem.du / 1000) * (progress / 100),
         'userDragSliderEnd'
       );
 

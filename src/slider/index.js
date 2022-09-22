@@ -20,7 +20,7 @@ Component({
   properties: {
     duration: Number,
     isProgressActive: Boolean,
-    infoAreaBottom: Number,
+    bottom: Number,
     progress: {
       type: Number,
       value: 0,

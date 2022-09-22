@@ -41,6 +41,15 @@
               bindtimeupdate="onVideoTimeUpdate"
               object-fit="{{item.vw/item.vh <= 0.6 ? 'cover' : 'contain'}}"
             >
+              <slider
+                wx:if="{{enableSlider && item.du >= showSliderDurationThreshold && index === current}}"
+                progress="{{sliderProgress}}"
+                isProgressActive="{{!isPlayingItems[item.id]}}"
+                duration="{{item.du}}"
+                bottom="{{sliderBottom}}"
+                bind:onDragStart="onSliderDragStart"
+                bind:onDragEnd="onSliderDragEnd"
+              ></slider>
               <slot name="aboveVideo"></slot>
             </video>
             <view
