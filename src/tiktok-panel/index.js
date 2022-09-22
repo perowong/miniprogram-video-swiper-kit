@@ -13,9 +13,7 @@ Component({
     bottom: Number
   },
 
-  data: {
-    
-  },
+  data: {},
 
   methods: {
     onLikeTap: function () {

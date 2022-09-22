@@ -10,9 +10,10 @@ export default {
       shareText: 'share',
       title: 'The past is like a dream',
       user: {
-        nickname: 'Netflex'
+        nickname: 'Netflix'
       },
-      musicCover: 'https://upload-images.jianshu.io/upload_images/5809200-4de5440a56bff58f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/200'
+      musicCover:
+        'https://upload-images.jianshu.io/upload_images/5809200-4de5440a56bff58f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/200'
     },
     {
       id: 'videoId002',
@@ -24,9 +25,10 @@ export default {
       shareText: '124.4k',
       title: 'So, am i your destiny',
       user: {
-        nickname: 'Netflex'
+        nickname: 'Netflix video'
       },
-      musicCover: 'https://upload-images.jianshu.io/upload_images/5809200-a99419bb94924e6d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/200'
+      musicCover:
+        'https://upload-images.jianshu.io/upload_images/5809200-a99419bb94924e6d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/200'
     }
   ]
 };

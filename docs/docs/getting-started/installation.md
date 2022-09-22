@@ -3,10 +3,11 @@ sidebar_position: 1
 ---
 
 # Installation
+
 ### Install from NPM
 
 It's available as a package on NPM for use with a module bundler or in a Node application.  
-In your miniprogram project root directory with package.json, run: 
+In your miniprogram project root directory with package.json, run:
 
 ```
 # npm
@@ -16,14 +17,15 @@ npm i @miniprogram-video-swiper-kit/video-swiper
 yarn add @miniprogram-video-swiper-kit/video-swiper
 ```
 
-You can check out this weChat miniprogram official doc to figure out 
+You can check out this weChat miniprogram official doc to figure out
 [how to use npm](https://developers.weixin.qq.com/miniprogram/dev/devtools/npm.html) in miniprogram project.
 
 > If you want to install other components, just run:
+>
 > ```
 > # npm
 > npm i @miniprogram-video-swiper-kit/{{component-name}}
-> 
+>
 > # yarn
 > yarn add @miniprogram-video-swiper-kit/{{component-name}}
 > ```
@@ -51,7 +53,5 @@ You can check out this weChat miniprogram official doc to figure out
 
 ```html
 <!-- list: your video items data with union id, url -->
-<videoSwiper
-  list="{{list}}"
-></videoSwiper>
+<videoSwiper list="{{list}}"></videoSwiper>
 ```

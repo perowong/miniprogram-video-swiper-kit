@@ -1,10 +1,9 @@
 ---
 name: Bug report
 about: Create a report to help us improve
-title: "[BUG] xxx"
+title: '[BUG] xxx'
 labels: bug
 assignees: perowong
-
 ---
 
 **Describe the bug**
@@ -12,6 +11,7 @@ A clear and concise description of what the bug is.
 
 **To Reproduce**
 Steps to reproduce the behavior:
+
 1. Go to '...'
 2. Click on '....'
 3. Scroll down to '....'
@@ -24,15 +24,17 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 **Devtool (please complete the following information):**
- - Devtool version : [e.g. 1.02.1808300]
- - Miniprogram base lib version [e.g. 2.24.7]
- - Version [e.g. v1.0.0]
+
+- Devtool version : [e.g. 1.02.1808300]
+- Miniprogram base lib version [e.g. 2.24.7]
+- Version [e.g. v1.0.0]
 
 **Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Miniprogram base lib version [e.g. 2.24.7]
- - Version [e.g. v1.0.0]
+
+- Device: [e.g. iPhone6]
+- OS: [e.g. iOS8.1]
+- Miniprogram base lib version [e.g. 2.24.7]
+- Version [e.g. v1.0.0]
 
 **Additional context**
 Add any other context about the problem here.
