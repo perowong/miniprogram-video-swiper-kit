@@ -98,3 +98,44 @@
   animation-play-state: paused;
   -webkit-animation-play-state: paused;
 }
+
+.userinfo-ctn {
+  position: absolute;
+  bottom: 40rpx;
+  right: 140rpx;
+  left: 32rpx;
+  transition: opacity .3s;
+  text-shadow: 2rpx 2rpx 4rpx rgba(0, 0, 0, .3);
+
+  .user {
+    display: flex;
+    align-items: center;
+
+    .avatar {
+      width: 64rpx;
+      height: 64rpx;
+      border: 2rpx solid #FFFFFF;
+      box-sizing: border-box;
+      border-radius: 50%;
+      margin-right: 16rpx;
+    }
+    .nickname {
+      line-height: 1.5;
+      font-size: 30rpx;
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+  }
+
+  .title {
+    line-height: 1.5;
+    margin-top: 15rpx;
+    display: -webkit-box;
+    overflow: hidden;
+    font-size: 30rpx;
+    color: #E6E6E6;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+}

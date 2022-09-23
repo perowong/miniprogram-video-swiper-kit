@@ -27,8 +27,17 @@
   <view class="box">
     <view
       class="icon music {{isCurrent ? 'rotate' : ''}} {{!isPlaying ? 'paused' : ''}}"
+      catchtap="onMusicTap"
     >
       <image class="avatar" src="{{item.musicCover}}"></image>
     </view>
   </view>
 </view>
+
+<view class="userinfo-ctn" style="opacity: {{opacity}};padding-bottom: {{bottom}}px;">
+  <view class="user" catchtap="onUserTap">
+    <text class="nickname">@ {{item.user.nickname}}</text>
+  </view>
+  <view class="title">{{item.title}}</view>
+</view>
+

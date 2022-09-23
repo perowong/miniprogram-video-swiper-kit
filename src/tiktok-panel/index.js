@@ -20,19 +20,28 @@ Component({
       const { item } = this.data;
 
       wx.vibrateShort({ type: 'short' });
-      this.triggerEvent('likeTap', { item });
+      this.triggerEvent('onLikeTap', { item });
     },
 
     onCommentTap: function () {
       const { item } = this.data;
-      this.triggerEvent('commentTap', { item });
+      this.triggerEvent('onCommentTap', { item });
     },
 
     onShareTap: function () {
       const { item } = this.data;
 
       wx.vibrateShort({ type: 'short' });
-      this.triggerEvent('shareTap', { item });
+      this.triggerEvent('onShareTap', { item });
+    },
+    onMusicTap: function () {
+      const { item } = this.data;
+      this.triggerEvent('onMusicTap', { item });
+    },
+
+    onUserTap: function () {
+      const { item } = this.data;
+      this.triggerEvent('onUserTap', { item });
     }
   }
 });
