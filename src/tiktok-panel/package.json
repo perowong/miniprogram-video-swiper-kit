@@ -1,6 +1,6 @@
 {
   "name": "@miniprogram-video-swiper-kit/tiktok-panel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An out-of-box miniprogram components kit in video community scenario. This is tiktok-panel.",
   "main": "miniprogram_dist/index.js",
   "scripts": {
