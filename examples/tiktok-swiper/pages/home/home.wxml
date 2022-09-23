@@ -1,8 +1,16 @@
 <videoSwiper
+  debug="{{true}}"
   list="{{list}}"
+  bind:onSwiperChanged="onSwiperChanged"
+
   sliderBottom="{{40}}"
   showSliderDurationThreshold="{{30*1000}}"
+
   generic:swiperItemPanel="tiktokPanel"
   swiperItemPanelBottom="{{50}}"
-  bind:onSwiperChanged="onSwiperChanged"
+  bind:onSwiperItemPanelLikeTap="onSwiperItemPanelLikeTap"
+  bind:onSwiperItemPanelCommentTap="onSwiperItemPanelCommentTap"
+  bind:onSwiperItemPanelShareTap="onSwiperItemPanelShareTap"
+  bind:onSwiperItemPanelMusicTap="onSwiperItemPanelMusicTap"
+  bind:onSwiperItemPanelUserTap="onSwiperItemPanelUserTap"
 ></videoSwiper>
