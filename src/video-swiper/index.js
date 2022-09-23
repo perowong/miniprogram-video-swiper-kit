@@ -52,6 +52,7 @@ Component({
       type: String,
       value: loadingIcon
     },
+    disableOpacityWhenSwiping: Boolean,
 
     // slider
     enableSlider: {
@@ -61,8 +62,11 @@ Component({
     showSliderDurationThreshold: Number, // set in millisecond
     sliderBottom: Number,
 
+    // swiperItemPanel
     swiperItemPanelBottom: Number,
-    disableOpacityWhenSwiping: Boolean
+
+    // debug
+    debug: Boolean
   },
 
   /**
@@ -87,15 +91,23 @@ Component({
       this.setData(initialData());
     },
 
+    _log(...args) {
+      if (!this.data.debug) {
+        return;
+      }
+
+      console.log('[Log videoSwiper] ', ...args);
+    },
+
     _idPrefix(vid) {
       return `videoSwiper-${vid}`;
     },
 
-    _triggerEvent(name, { current, itemId, ...rest }) {
+    _triggerEvent(name, { current, itemId, item = undefined, ...rest }) {
       this.triggerEvent(name, {
         current,
         itemId,
-        item: this.data.list[current],
+        item: item || this.data.list[current],
         ...rest
       });
     },
@@ -181,7 +193,7 @@ Component({
           dataset: { itemId }
         }
       } = e;
-      console.log('on video play: ', id);
+      this._log('on video play: ', id);
 
       waitingTimer && clearTimeout(waitingTimer);
       waitingTimer = null;
@@ -204,7 +216,8 @@ Component({
           dataset: { itemId }
         }
       } = e;
-      console.log('on video pause: ', id);
+      this._log('on video pause: ', id);
+
       this.data._isPlayingItems[itemId] = false;
       this.setData({
         isPlayingItems: this.data._isPlayingItems
@@ -300,7 +313,7 @@ Component({
      * Control video play, pause, seek, etc.
      */
     _getVideoCtxExec(videoId, { eventName, args, source }) {
-      console.log(`${eventName} ${videoId}, args: ${args}, source: ${source}`);
+      this._log(`${eventName} ${videoId}, args: ${args}, source: ${source}`);
 
       this.createSelectorQuery()
         .select(`#${videoId}`)
@@ -369,7 +382,7 @@ Component({
         }
 
         isOpacityChanged = true;
-        console.log('opacity appears when swiping');
+        this._log('opaques ui elements when swiping');
         this.setData({ infoOpacity: OPACITY_WHEN_SWIPING });
       }
     },
@@ -404,6 +417,41 @@ Component({
       );
 
       this.setData({ infoOpacity: NO_OPACITY });
+    },
+
+    /**
+     * panel
+     */
+    _triggerSIPEvent(name, e) {
+      const {
+        currentTarget: {
+          dataset: { current }
+        },
+        detail: { item }
+      } = e;
+      this._triggerEvent(name, {
+        current,
+        itemId: item.id,
+        item
+      });
+    },
+    onSIPLikeTap(e) {
+      this._triggerSIPEvent('onSwiperItemPanelLikeTap', e);
+    },
+    onSIPCommentTap(e) {
+      this._triggerSIPEvent('onSwiperItemPanelCommentTap', e);
+    },
+    onSIPShareTap(e) {
+      this._triggerSIPEvent('onSwiperItemPanelShareTap', e);
+    },
+    onSIPMusicTap(e) {
+      this._triggerSIPEvent('onSwiperItemPanelMusicTap', e);
+    },
+    onSIPUserTap(e) {
+      this._triggerSIPEvent('onSwiperItemPanelUserTap', e);
+    },
+    onSIPFollowTap(e) {
+      this._triggerSIPEvent('onSwiperItemPanelFollowTap', e);
     }
   }
 });

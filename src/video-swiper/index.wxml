@@ -41,7 +41,20 @@
               bindtimeupdate="onVideoTimeUpdate"
               object-fit="{{item.vw/item.vh <= 0.6 ? 'cover' : 'contain'}}"
             >
-              <slot name="aboveVideo"></slot>
+              <swiperItemPanel
+                data-current="{{current}}"
+                item="{{item}}"
+                bottom="{{swiperItemPanelBottom}}"
+                opacity="{{infoOpacity}}"
+                isCurrent="{{current === index}}"
+                isPlaying="{{isPlayingItems[item.id]}}"
+                bind:onLikeTap="onSIPLikeTap"
+                bind:onCommentTap="onSIPCommentTap"
+                bind:onShareTap="onSIPShareTap"
+                bind:onMusicTap="onSIPMusicTap"
+                bind:onUserTap="onSIPUserTap"
+                bind:onFollowTap="onSIPFollowTap"
+              ></swiperItemPanel>
               <slider
                 wx:if="{{enableSlider && item.du >= showSliderDurationThreshold && index === current}}"
                 progress="{{sliderProgress}}"
@@ -51,13 +64,6 @@
                 bind:onDragStart="onSliderDragStart"
                 bind:onDragEnd="onSliderDragEnd"
               ></slider>
-              <swiperItemPanel
-                item="{{item}}"
-                bottom="{{swiperItemPanelBottom}}"
-                opacity="{{infoOpacity}}"
-                isCurrent="{{current === index}}"
-                isPlaying="{{isPlayingItems[item.id]}}"
-              ></swiperItemPanel>
             </video>
             <view
               wx:if="{{isWaitingItems[item.id]}}"
