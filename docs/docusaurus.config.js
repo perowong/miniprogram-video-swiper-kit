@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Miniprogram-video-swiper-kit',
   tagline: `An out-of-box miniprogram components kit in video community scenario`,
-  url: 'https://i.overio.space/miniprogram-video-swiper-kit',
+  url: 'https://miniprogram-video-swiper-kit.overio.space',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -62,7 +62,7 @@ const config = {
             activeBasePath: 'docs',
             items: [
               { label: 'Getting Started', to: 'docs/category/getting-started' },
-              { label: 'Components - Basics', to: 'docs/category/components-basics' }
+              { label: 'Components - Basics', to: 'docs/category/components---basics' }
             ]
           },
           { to: '/blog', label: 'Blog', position: 'right' },
