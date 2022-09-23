@@ -2,6 +2,8 @@
 
 ![Miniprogram-video-swiper-kit](https://raw.githubusercontent.com/perowong/miniprogram-video-swiper-kit/main/logo/miniprogram-video-swiper-kit-logo.svg)
 
+If this kit is useful to you, you can support me by [staring the repo ⭐️](https://github.com/perowong/miniprogram-video-swiper-kit)
+
 This is an out-of-box open-source miniprogram components kit in video community scenario.  
 It includes basic UI components, such as `video-swiper`, `slider`, `comments-half-dialog`,  
 and some business UI components like `tiktok-panel`, and `wechat-channel-panel`, etc.
