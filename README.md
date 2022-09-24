@@ -1,6 +1,20 @@
-# Miniprogram-video-swiper-kit [![NPM Version](https://img.shields.io/npm/v/@miniprogram-video-swiper-kit/video-swiper?color=brightgreen)](https://www.npmjs.com/package/@miniprogram-video-swiper-kit/video-swiper)
+# Miniprogram-video-swiper-kit
 
-![Miniprogram-video-swiper-kit](https://raw.githubusercontent.com/perowong/miniprogram-video-swiper-kit/main/logo/miniprogram-video-swiper-kit-logo.svg)
+<p align="center">
+  <img
+    src="https://raw.githubusercontent.com/perowong/miniprogram-video-swiper-kit/main/logo/miniprogram-video-swiper-kit-logo.svg"
+    height="120"
+  />
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/@miniprogram-video-swiper-kit/video-swiper" alt="NPM Version">
+    <img src="https://img.shields.io/npm/v/@miniprogram-video-swiper-kit/video-swiper?color=brightgreen" />
+  </a>
+  <a href="https://github.com/perowong/miniprogram-video-swiper-kit/actions?query=workflow%3Adeploy-docs" alt="NPM Version">
+    <img src="https://github.com/perowong/miniprogram-video-swiper-kit/actions/workflows/deploy-docs.yml/badge.svg" />
+  </a>
+</p>
 
 If this kit is useful to you, you can support me by [staring the repo ⭐️](https://github.com/perowong/miniprogram-video-swiper-kit)
 

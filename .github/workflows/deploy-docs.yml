@@ -1,0 +1,32 @@
+name: docs
+on:
+  push:
+    branches: [ docs ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: docs
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '17'
+          cache: 'npm'
+      - name: Install and Build
+        run: |
+          cd docs
+          npm i
+          npm run build
+      - name: Deploy to aliyun server
+        uses: easingthemes/ssh-deploy@v2
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.ALIYUN_SERVER_ACCESS_TOKEN }}
+          ARGS: "-avzr --delete"
+          SOURCE: "docs/build/"
+          REMOTE_HOST: ${{ secrets.ALIYUN_SERVER_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: ${{ secrets.REMOTE_TARGET }}
+          EXCLUDE: "/dist/, /node_modules/"
