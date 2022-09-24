@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Miniprogram-video-swiper-kit',
   tagline: `An out-of-box miniprogram components kit in video community scenario`,
-  url: 'https://miniprogram-video-swiper-kit.overio.space',
-  baseUrl: '/',
+  url: 'https://docs.overio.space',
+  baseUrl: '/miniprogram-video-swiper-kit/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
