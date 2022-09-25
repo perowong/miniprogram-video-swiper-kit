@@ -92,7 +92,7 @@ So, if you have any help-wanted, feature idea, or bug report, please
 [commit a issue](https://github.com/perowong/miniprogram-video-swiper-kit/issues)
 or [initiate a discussion](https://github.com/perowong/miniprogram-video-swiper-kit/discussions)
 to let me know;)  
-By the way, you can also joined the [Discord Chat Room](https://discord.gg/zFUkQdcHkC) with other developers.
+By the way, you can also join the [Discord Chat Room](https://discord.gg/zFUkQdcHkC) with other developers.
 
 ## Basic Examples
 

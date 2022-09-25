@@ -1,6 +1,6 @@
 {
   "name": "miniprogram-video-swiper-kit",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "An out-of-box miniprogram components kit in video community scenario, such as video-swiper, slider, comments-half-dialog, tiktok-panel, wechat-channel-panel, etc.",
   "miniprogram": "dist",
   "repository": "https://github.com/perowong/miniprogram-video-swiper-kit",
