@@ -11,7 +11,7 @@
   <a href="https://www.npmjs.com/package/@miniprogram-video-swiper-kit/video-swiper" alt="NPM Version">
     <img src="https://img.shields.io/npm/v/@miniprogram-video-swiper-kit/video-swiper?color=brightgreen" />
   </a>
-  <a href="https://github.com/perowong/miniprogram-video-swiper-kit/actions?query=workflow%3Adeploy-docs" alt="NPM Version">
+  <a href="https://github.com/perowong/miniprogram-video-swiper-kit/actions/workflows/deploy-docs.yml" alt="NPM Version">
     <img src="https://github.com/perowong/miniprogram-video-swiper-kit/actions/workflows/deploy-docs.yml/badge.svg" />
   </a>
 </p>
@@ -62,7 +62,7 @@ You can check out this weChat miniprogram official doc to figure out
 > yarn add @miniprogram-video-swiper-kit/{{component-name}}
 > ```
 
-Check out [all available components here]().
+Check out [all available components here](https://docs.overio.space/miniprogram-video-swiper-kit/docs/category/components).
 
 ## Documentation
 
@@ -75,6 +75,24 @@ The miniprogram-video-swiper-kit docs are located at https://docs.overio.space/m
 - FAQ
 
 ## Before Proceeding Further
+
+@Miniprogram-video-swiper-kit/video-swiper is an easy-using component, but you should also consider weather it's
+appropriate for your situation. Please don't use this kit just because someone said you should, instead, you should
+take some time to understand the benefit and tradeoffs of using it.
+
+Here are some suggestions on when it make sense to use it:
+
+- Your business scenario is based on social community.
+- You want a stable component that have been tested by massive client user.
+- The @miniprogram-components-plus/video-swiper of weChat team doesn't meet your demand, you can take a try.
+
+On the other hand, this component's features about ui properties or events are not fully exported for you,
+some of them are hard code in pkg now, I will pick them out progressively.  
+So, if you have any help-wanted, feature idea, or bug report, please
+[commit a issue](https://github.com/perowong/miniprogram-video-swiper-kit/issues)
+or [initiate a discussion](https://github.com/perowong/miniprogram-video-swiper-kit/discussions)
+to let me know;)  
+By the way, you can also joined the [Discord Chat Room](https://discord.gg/zFUkQdcHkC) with other developers.
 
 ## Basic Examples
 
@@ -89,8 +107,9 @@ the feature swiping up videos turning into an essential fundamental part of most
 especially in the community product.
 
 So, it's essential to build an easy using, out of box swiping video component. The component is not provided
-by miniprogram officially, though it has a video-swiper component in miniprogram-component-plus, which is not perfectly
-compatible with some scenarios, such as some unexpected other video's voice playing when swiping the screen quickly,
+by miniprogram officially, though it has a video-swiper component in miniprogram-component-plus of weChat team,  
+which is not perfectly compatible with some scenarios,
+such as some unexpected other video's voice playing when swiping the screen quickly,
 customizing play/pause state, and community interactive features, etc.
 
 Based on the video-swiper, other out-of-box component follows, such as `slider`, `comments-half-dialog`, `tiktok-panel`,
@@ -104,4 +123,4 @@ You can find the designed logo [on GitHub](https://github.com/perowong/miniprogr
 
 [MIT](https://github.com/perowong/miniprogram-video-swiper-kit/blob/main/LICENSE)
 
-> More doc is on the way...
+## More doc is on the way...

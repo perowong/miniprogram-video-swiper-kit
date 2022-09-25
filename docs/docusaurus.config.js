@@ -89,8 +89,12 @@ const config = {
             title: 'Community',
             items: [
               {
+                label: 'Discussion',
+                href: 'https://github.com/perowong/miniprogram-video-swiper-kit/discussions'
+              },
+              {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/perowong'
+                href: 'https://discord.gg/zFUkQdcHkC'
               },
               {
                 label: 'Twitter',
