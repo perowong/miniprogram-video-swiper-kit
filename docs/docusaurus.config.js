@@ -62,7 +62,7 @@ const config = {
             activeBasePath: 'docs',
             items: [
               { label: 'Getting Started', to: 'docs/category/getting-started' },
-              { label: 'Components - Basics', to: 'docs/category/components---basics' }
+              { label: 'Components', to: 'docs/category/components' }
             ]
           },
           { to: '/blog', label: 'Blog', position: 'right' },

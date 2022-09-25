@@ -66,11 +66,11 @@ Check out [all available components here]().
 
 ## Documentation
 
-The miniprogram-video-swiper-kit docs are located at https://miniprogram-video-swiper-kit.overio.spcace
+The miniprogram-video-swiper-kit docs are located at https://docs.overio.space/miniprogram-video-swiper-kit/
 
-- [Introduction]()
-- Getting Started
-- Basic components
+- [Introduction](https://docs.overio.space/miniprogram-video-swiper-kit/docs/intro)
+- [Getting Started](https://docs.overio.space/miniprogram-video-swiper-kit/docs/category/getting-started)
+- [Basic components](https://docs.overio.space/miniprogram-video-swiper-kit/docs/category/components---basics)
 - Business components
 - FAQ
 

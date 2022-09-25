@@ -1,7 +1,11 @@
 name: docs
 on:
   push:
-    branches: [ docs ]
+    branches:
+     - main
+    paths:
+     - '**.md'
+     - 'docs/**'
 jobs:
   build:
     runs-on: ubuntu-latest
