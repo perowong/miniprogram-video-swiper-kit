@@ -13,6 +13,7 @@
     "pre-commit": "lint-staged",
     "build": "gulp",
     "build-release": "npm run build && node ./scripts/copy.js",
+    "build-docs": "node ./scripts/buildDocs.js",
     "dev-tiktok-swiper": "gulp devWatch --proj=tiktok-swiper"
   },
   "devDependencies": {
