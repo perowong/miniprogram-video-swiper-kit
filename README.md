@@ -96,7 +96,61 @@ By the way, you can also join the [Discord Chat Room](https://discord.gg/zFUkQdc
 
 ## Basic Examples
 
+```json
+{
+  "navigationStyle": "custom",
+  "navigationBarBackgroundColor": "#191919",
+  "navigationBarTitleText": "",
+  "navigationBarTextStyle": "white",
+  "disableScroll": true,
+  "usingComponents": {
+    "videoSwiper": "@miniprogram-video-swiper-kit/video-swiper"
+  }
+}
+```
+
+```js
+// page js
+Page({
+  data: {
+    list: [
+      {
+        id: 'videoId-210709224656837141',
+        url: 'http://vfx.mtime.cn/Video/2021/07/09/mp4/210709224656837141.mp4',
+        du: 167000,
+        objectFit: 'contain'
+      },
+      {
+        id: 'videoId-210710094507540173',
+        url: 'http://vfx.mtime.cn/Video/2021/07/10/mp4/210710094507540173.mp4',
+        du: 132000,
+        objectFit: 'contain'
+      }
+    ]
+  },
+
+  onSwiperChanged({ detail }) {
+    const { item } = detail;
+    console.log('swiper changed to: ', item);
+  }
+});
+```
+
+```html
+<!-- page wxml -->
+<videoSwiper
+  debug="{{true}}"
+  list="{{list}}"
+  sliderBottom="{{40}}"
+  bind:onSwiperChanged="onSwiperChanged"
+  generic:swiperItemPanel="view"
+></videoSwiper>
+```
+
 ## Examples
+
+- [tiktok-swiper](https://github.com/perowong/miniprogram-video-swiper-kit/tree/main/examples/tiktok-swiper)
+- wechat-channel-swiper
 
 ## Motivation
 
