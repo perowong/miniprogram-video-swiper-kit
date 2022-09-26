@@ -31,6 +31,7 @@ Component({
   properties: {
     safeBottom: Number,
 
+    // swiper
     list: Array,
     mutateCurrent: {
       type: Number,
@@ -41,6 +42,10 @@ Component({
           });
         }
       }
+    },
+    easingFunction: {
+      type: String,
+      value: 'default'
     },
 
     // ui default icon
@@ -78,7 +83,7 @@ Component({
     /* attached() {
       wx.onAppHide(() => {
         const { current, list } = this.data;
-        this._triggerEvent('releaseVideoSwiperWhenAppHide', { current, itemId: list[current]?.id, ctx: this });
+        this._triggerEvent('releaseVideoSwiperWhenAppHide', { e, current, itemId: list[current]?.id, ctx: this });
       });
     } */
   },
@@ -103,8 +108,9 @@ Component({
       return `videoSwiper-${vid}`;
     },
 
-    _triggerEvent(name, { current, itemId, item = undefined, ...rest }) {
+    _triggerEvent(name, { e, current, itemId, item = undefined, ...rest }) {
       this.triggerEvent(name, {
+        nativeEvent: e,
         current,
         itemId,
         item: item || this.data.list[current],
@@ -160,7 +166,7 @@ Component({
         this._playVideo(this._idPrefix(currentItemId), currentItemId, 'swiperAnimationFinish');
       }
 
-      this._triggerEvent('onSwiperChanged', { current, itemId: currentItemId });
+      this._triggerEvent('onSwiperChanged', { e, current, itemId: currentItemId });
     },
 
     /**
@@ -206,7 +212,7 @@ Component({
       });
 
       const current = this.data.current;
-      this._triggerEvent('videoPlay', { current, itemId });
+      this._triggerEvent('videoPlay', { e, current, itemId });
     },
 
     onVideoPause(e) {
@@ -224,7 +230,7 @@ Component({
       });
 
       const current = this.data.current;
-      this._triggerEvent('videoPause', { current, itemId });
+      this._triggerEvent('videoPause', { e, current, itemId });
     },
 
     onVideoTimeUpdate(e) {
@@ -245,6 +251,7 @@ Component({
       }
 
       this._triggerEvent('videoTimeupdate', {
+        e,
         current,
         itemId,
         item: curItem,
@@ -277,6 +284,19 @@ Component({
       }
     },
 
+    onVideoEnded(e) {
+      this._triggerEvent('onVideoEnded', { e });
+    },
+    onVideoWaiting(e) {
+      this._triggerEvent('onVideoWaiting', { e });
+    },
+    onVideoProgress(e) {
+      this._triggerEvent('onVideoProgress', { e });
+    },
+    onVideoError(e) {
+      this._triggerEvent('onVideoError', { e });
+    },
+
     /**
      * On video data waiting and loaded
      */
@@ -304,6 +324,7 @@ Component({
       this._setVideoMetadata(itemId);
 
       this._triggerEvent('onLoadedMetadata', {
+        e,
         current: _current,
         itemId
       });
@@ -430,6 +451,7 @@ Component({
         detail: { item }
       } = e;
       this._triggerEvent(name, {
+        e,
         current,
         itemId: item.id,
         item

@@ -2,7 +2,7 @@
   class="swiper-container"
   vertical
   current="{{mutateCurrent}}"
-  easing-function="easeOutCubic"
+  easing-function="{{easingFunction}}"
   bindanimationfinish="onSwiperAnimationFinish"
   bindchange="onSwiperChange"
   style="height: calc(100vh - {{safeBottom}}px);"
@@ -31,15 +31,20 @@
               show-center-play-btn="{{false}}"
               enable-progress-gesture="{{false}}"
               controls="{{false}}"
+              
               loop
               src="{{item.url}}"
-              poster="{{isWaitingItems[item.id] ? item.url : ''}}"
+              poster="{{isWaitingItems[item.id] ? item.poster : ''}}"
               bindtap="onVideoTap"
               bindplay="onVideoPlay"
-              bindloadedmetadata="onVideoLoadedMetadata"
               bindpause="onVideoPause"
               bindtimeupdate="onVideoTimeUpdate"
-              object-fit="{{item.vw/item.vh <= 0.6 ? 'cover' : 'contain'}}"
+              bindended="onVideoEnded"
+              bindprogress="onVideoProgress"
+              bindloadedmetadata="onVideoLoadedMetadata"
+              bindwaiting="onVideoWaiting"
+              binderror="onVideoError"
+              object-fit="{{item.objectFit ? item.objectFit : (item.vw/item.vh <= item.ratio || 0.6 ? 'cover' : 'contain')}}"
             >
               <swiperItemPanel
                 data-current="{{current}}"
