@@ -1,6 +1,6 @@
 {
   "name": "miniprogram-video-swiper-kit",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "An out-of-box miniprogram components kit in video community scenario, such as video-swiper, slider, comments-half-dialog, tiktok-panel, wechat-channel-panel, etc.",
   "miniprogram": "dist",
   "repository": "https://github.com/perowong/miniprogram-video-swiper-kit",
@@ -14,6 +14,7 @@
     "build": "gulp",
     "build-release": "npm run build && node ./scripts/copy.js",
     "build-docs": "node ./scripts/buildDocs.js",
+    "upgradePkgVer": "node ./scripts/upgradePkgVer.js",
     "dev-tiktok-swiper": "gulp devWatch --proj=tiktok-swiper"
   },
   "devDependencies": {
