@@ -70,7 +70,7 @@ The miniprogram-video-swiper-kit docs are located at https://docs.overio.space/m
 
 - [Introduction](https://docs.overio.space/miniprogram-video-swiper-kit/docs/intro)
 - [Getting Started](https://docs.overio.space/miniprogram-video-swiper-kit/docs/category/getting-started)
-- [Basic components](https://docs.overio.space/miniprogram-video-swiper-kit/docs/category/components---basics)
+- [Components](https://docs.overio.space/miniprogram-video-swiper-kit/docs/category/components)
 - Business components
 - FAQ
 
@@ -98,11 +98,6 @@ By the way, you can also join the [Discord Chat Room](https://discord.gg/zFUkQdc
 
 ```json
 {
-  "navigationStyle": "custom",
-  "navigationBarBackgroundColor": "#191919",
-  "navigationBarTitleText": "",
-  "navigationBarTextStyle": "white",
-  "disableScroll": true,
   "usingComponents": {
     "videoSwiper": "@miniprogram-video-swiper-kit/video-swiper"
   }
@@ -146,6 +141,8 @@ Page({
   generic:swiperItemPanel="view"
 ></videoSwiper>
 ```
+
+Here are [video-swiper's api of all properties and events](https://docs.overio.space/miniprogram-video-swiper-kit/docs/components/video-swiper#api)
 
 ## Examples
 
