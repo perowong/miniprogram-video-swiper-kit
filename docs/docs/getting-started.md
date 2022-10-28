@@ -32,9 +32,9 @@ You can check out this weChat miniprogram official doc to figure out
 
 ## All available components
 
-- [video-swiper](../components/video-swiper)
-- [slider](../components/slider)
-- [tiktok-panel](../components/tiktok-panel)
+- [video-swiper](./components/video-swiper)
+- [slider](./components/slider)
+- [tiktok-panel](./components/tiktok-panel)
 
 * [ ] wechat-channel-panel
 
