@@ -48,6 +48,7 @@
             >
               <swiperItemPanel
                 data-current="{{current}}"
+                data-item-id="{{item.id}}"
                 item="{{item}}"
                 bottom="{{swiperItemPanelBottom}}"
                 opacity="{{infoOpacity}}"
@@ -61,7 +62,7 @@
                 bind:onFollowTap="onSIPFollowTap"
               ></swiperItemPanel>
               <slider
-                wx:if="{{enableSlider && item.du >= showSliderDurationThreshold && index === current}}"
+                wx:if="{{enableSlider && item.du >= thresholdOfSliderActive && index === current}}"
                 progress="{{sliderProgress}}"
                 isProgressActive="{{!isPlayingItems[item.id]}}"
                 duration="{{item.du}}"

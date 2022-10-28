@@ -45,7 +45,7 @@ Component({
     },
     easingFunction: {
       type: String,
-      value: 'default'
+      value: 'easeOutCubic'
     },
 
     // ui default icon
@@ -64,7 +64,7 @@ Component({
       type: Boolean,
       value: true
     },
-    showSliderDurationThreshold: Number, // set in millisecond
+    thresholdOfSliderActive: Number, // set in millisecond
     sliderBottom: Number,
 
     // swiperItemPanel
@@ -109,10 +109,13 @@ Component({
     },
 
     _triggerEvent(name, { e, current, itemId, item = undefined, ...rest }) {
+      const cur = current || this.data._current;
+      const iid = itemId || e?.currentTarget?.dataset?.itemId;
+
       this.triggerEvent(name, {
         nativeEvent: e,
-        current,
-        itemId,
+        current: cur,
+        itemId: iid,
         item: item || this.data.list[current],
         ...rest
       });
@@ -212,7 +215,7 @@ Component({
       });
 
       const current = this.data.current;
-      this._triggerEvent('videoPlay', { e, current, itemId });
+      this._triggerEvent('onVideoPlay', { e, current, itemId });
     },
 
     onVideoPause(e) {
@@ -230,7 +233,7 @@ Component({
       });
 
       const current = this.data.current;
-      this._triggerEvent('videoPause', { e, current, itemId });
+      this._triggerEvent('onVideoPause', { e, current, itemId });
     },
 
     onVideoTimeUpdate(e) {
@@ -241,7 +244,7 @@ Component({
         }
       } = e;
 
-      const { current, list, enableSlider, showSliderDurationThreshold } = this.data;
+      const { current, list, enableSlider, thresholdOfSliderActive } = this.data;
       const curItem = list[current];
 
       // make it compatible with some item without id (e.g. wx advertisement) or exception
@@ -250,7 +253,7 @@ Component({
         return;
       }
 
-      this._triggerEvent('videoTimeupdate', {
+      this._triggerEvent('onVideoTimeUpdate', {
         e,
         current,
         itemId,
@@ -259,12 +262,12 @@ Component({
         playItemId: itemId,
 
         currentTime,
-        currentTimeMilliSecond: currentTime * 1000,
+        currentTimeMillisecond: currentTime * 1000,
         duration,
         durationMillisecond: curItem.du || duration * 1000
       });
 
-      if (enableSlider && curItem.du && duration * 1000 >= showSliderDurationThreshold) {
+      if (enableSlider && curItem.du && duration * 1000 >= thresholdOfSliderActive) {
         this.setData({
           sliderProgress: (currentTime / duration) * 100
         });
