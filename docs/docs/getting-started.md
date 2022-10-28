@@ -1,10 +1,10 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
-# Installation
+# Getting Started
 
-### Install from NPM
+## Install from NPM
 
 It's available as a package on NPM for use with a module bundler or in a Node application.  
 In your miniprogram project root directory with package.json, run:
@@ -30,14 +30,15 @@ You can check out this weChat miniprogram official doc to figure out
 > yarn add @miniprogram-video-swiper-kit/{{component-name}}
 > ```
 
-### All available components
+## All available components
 
-- video-swiper
-- slider
-- [ ] tiktok-panel
-- [ ] wechat-channel-panel
+- [video-swiper](../components/video-swiper)
+- [slider](../components/slider)
+- [tiktok-panel](../components/tiktok-panel)
 
-### Import component in page/component's json
+* [ ] wechat-channel-panel
+
+## Import component in page/component's json
 
 > Take `video-swiper` for example
 
@@ -47,7 +48,7 @@ You can check out this weChat miniprogram official doc to figure out
 }
 ```
 
-### Add component to page/component's wxml
+## Add component to page/component's wxml
 
 > Take `video-swiper` for example
 

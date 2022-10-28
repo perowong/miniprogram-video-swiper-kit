@@ -69,7 +69,7 @@ Check out [all available components here](https://docs.overio.space/miniprogram-
 The miniprogram-video-swiper-kit docs are located at https://docs.overio.space/miniprogram-video-swiper-kit/
 
 - [Introduction](https://docs.overio.space/miniprogram-video-swiper-kit/docs/intro)
-- [Getting Started](https://docs.overio.space/miniprogram-video-swiper-kit/docs/category/getting-started)
+- [Getting Started](https://docs.overio.space/miniprogram-video-swiper-kit/docs/getting-started)
 - [Components](https://docs.overio.space/miniprogram-video-swiper-kit/docs/category/components)
 - Business components
 - FAQ

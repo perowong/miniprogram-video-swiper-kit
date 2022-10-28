@@ -61,7 +61,7 @@ const config = {
             position: 'right',
             activeBasePath: 'docs',
             items: [
-              { label: 'Getting Started', to: 'docs/category/getting-started' },
+              { label: 'Getting Started', to: 'docs/getting-started' },
               { label: 'Components', to: 'docs/category/components' }
             ]
           },
