@@ -9,6 +9,7 @@ export default {
       commentText: '21k',
       shareText: 'share',
       title: 'The past is like a dream',
+      objectFit: 'contain',
       user: {
         nickname: 'Netflix'
       },
